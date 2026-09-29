@@ -24,5 +24,15 @@ diff_output.txt
 scratch.txt
 dump.txt
 
-# Stack-specific ignores (Python/.NET/Node/etc.) are added once the stack is
-# chosen -- see /factory-init-tech-context.
+# Stack: Electron + TypeScript (see Technical-Context.MD)
+node_modules/
+out/
+dist/
+release/
+coverage/
+*.tsbuildinfo
+npm-debug.log*
+.env
+.env.*
+playwright-report/
+test-results/
