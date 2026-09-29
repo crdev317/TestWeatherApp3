@@ -7,7 +7,7 @@ A small Windows desktop app that shows the weather for places the user searches 
 ### Places
 
 **Location**:
-A named place with coordinates, found by searching, and always shown as name, region and country (e.g. "Springfield, Illinois, United States").
+A named place with coordinates, found by searching, and shown as name, region and country (e.g. "Springfield, Illinois, United States"), leaving out a region or country the Weather Provider does not supply.
 _Avoid_: City, place, town
 
 **Saved Location**:
@@ -91,5 +91,5 @@ _Avoid_: Units setting, measurement preference
 - "Forecast" was used for both the whole bundle and the predicted part — resolved: the bundle is a **Weather Report**; a **Forecast** is only the predicted part.
 - "Today" could mean the user's day or the Location's — resolved: it is the Location's day, by its **Local Time**.
 - "Current Conditions" suggested "right now" even for an old **Weather Report** — resolved: they are the conditions as of **Last Updated**, and are presented that way.
-- Two places can share a name — resolved: a **Location** is always identified by name, region and country, and two Locations are the same when the **Weather Provider** says they are.
+- Two places can share a name — resolved: a **Location** is shown by name, region and country (any the **Weather Provider** omits are left out), and two Locations are the same when the **Weather Provider** says they are.
 - Severe-weather alerts, maps or radar, historical weather, and air quality, pollen or UV were considered — resolved: all are out of scope and have no terms here; none is part of a **Weather Report**.
