@@ -26,9 +26,10 @@ Engineering-practice contract for code-writing agents in this project. Every imp
 **State:** React built-in state and context — no Redux/Zustand/MobX.
 **Styling:** CSS Modules — no CSS-in-JS or utility-CSS framework.
 **Logging:** `electron-log`.
-**Testing:** `vitest`, `@testing-library/react`, `msw` (recorded-replay HTTP fixtures), `@playwright/test` with its Electron support (app-level tests).
+**Testing:** `vitest`, `@testing-library/react`, `jsdom` (the DOM environment for component tests), `msw` (recorded-replay HTTP fixtures), `@playwright/test` with its Electron support (app-level tests).
+**Build:** `@vitejs/plugin-react` (React JSX transform and dev refresh for the electron-vite renderer build).
 **Packaging:** `electron-builder` (NSIS Windows installer).
-**Lint/format:** `eslint`, `prettier`.
+**Lint/format:** `eslint` with `@eslint/js` and `typescript-eslint` (TypeScript parsing and rules), `prettier`.
 
 ## Toolchain pinning
 - Policy: **exact-pinned.**
